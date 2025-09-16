@@ -9,5 +9,6 @@ export async function getHero() {
 
 export async function getTestimonials() {
   try { return await sanityClient.fetch(testimonialsQuery); }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   catch { return [] as any[]; }
 }

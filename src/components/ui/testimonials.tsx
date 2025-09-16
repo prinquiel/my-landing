@@ -163,7 +163,7 @@ export function Testimonials() {
                       <div className="space-y-6">
                         {/* Quote */}
                         <div className="relative">
-                          <div className="text-6xl accent-text font-serif absolute -top-4 -left-4 opacity-30 select-none">"</div>
+                          <div className="text-6xl accent-text font-serif absolute -top-4 -left-4 opacity-30 select-none">&quot;</div>
                           <blockquote className="text-white text-xl md:text-2xl leading-relaxed font-light italic pl-6">
                             {t(`${testimonialData.translationKey}.quote`)}
                           </blockquote>

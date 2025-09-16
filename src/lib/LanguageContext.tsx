@@ -6,7 +6,7 @@ import { translations, Language } from './translations';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (path: string) => any;
+  t: (path: string) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -28,8 +28,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [language]);
 
   // Translation function
-  const t = (path: string) => {
+  const t = (path: string): string => {
     const keys = path.split('.');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let value: any = translations[language];
     
     for (const key of keys) {
@@ -41,7 +42,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       }
     }
     
-    return value;
+    return typeof value === 'string' ? value : path;
   };
 
   return (

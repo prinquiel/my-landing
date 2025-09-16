@@ -6,7 +6,7 @@ type HeroData = {
   title?: string;
   subtitle?: string;
   cta?: { label?: string; href?: string };
-  image?: any;
+  image?: unknown;
 };
 
 const FALLBACK: Required<HeroData> = {
