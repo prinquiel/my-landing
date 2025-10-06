@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inconsolata } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
+import { Analytics } from "@vercel/analytics/next";
 
 const inconsolata = Inconsolata({
   variable: "--font-inconsolata",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Providers>
           {children}
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
