@@ -7,9 +7,9 @@ import { LanguagePicker } from './language-picker';
 const navItems = [
   { id: 'inicio', labelKey: 'nav.home' },
   { id: 'about', labelKey: 'nav.about' },
-  { id: 'servicios', labelKey: 'nav.services' },
-  { id: 'testimonios', labelKey: 'nav.testimonials' },
-  { id: 'contacto', labelKey: 'nav.contact' },
+  { id: 'servicios', labelKey: 'nav.servicios' },
+  { id: 'proyectos', labelKey: 'nav.proyectos' },
+  { id: 'contacto', labelKey: 'nav.contacto' },
 ];
 
 export function Navbar() {
@@ -43,15 +43,16 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#080C36]/80 backdrop-blur-md border-b border-white/20">
-      <div className="mx-auto max-w-4xl px-6 h-16">
+      <div className="mx-auto max-w-6xl px-3 sm:px-6 h-20">
         <nav className="flex items-center justify-between h-full">
+          {/* Mobile and Desktop Navigation */}
           <div className="flex-1 flex justify-center">
-            <ul className="flex gap-8">
+            <ul className="flex gap-3 sm:gap-6 lg:gap-10 overflow-x-auto scrollbar-hide">
               {navItems.map((item) => (
-                <li key={item.id}>
+                <li key={item.id} className="flex-shrink-0">
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className={`nav-link text-sm font-medium py-2 px-4 rounded-lg transition-all duration-300 ${
+                    className={`nav-link text-sm sm:text-base font-medium py-3 px-3 sm:px-6 rounded-lg transition-all duration-300 whitespace-nowrap ${
                       activeSection === item.id
                         ? 'active text-white bg-white/10'
                         : 'text-white/80 hover:text-white'
@@ -63,7 +64,7 @@ export function Navbar() {
               ))}
             </ul>
           </div>
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 ml-4">
             <LanguagePicker />
           </div>
         </nav>

@@ -16,12 +16,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations = {
   es: {
     // Navigation
-    'nav.home': 'Home',
-    'nav.about': 'About',
-    'nav.services': 'Servicios',
-    'nav.packages': 'Paquetes',
-    'nav.testimonials': 'Testimonios',
-    'nav.contact': 'Contacto',
+    'nav.home': 'Inicio',
+    'nav.about': 'Nosotros',
+    'nav.servicios': 'Servicios',
+    'nav.proyectos': 'Proyectos',
+    'nav.contacto': 'Contacto',
     
     // Hero Section
     'hero.title.part1': 'Convertimos tus',
@@ -35,9 +34,9 @@ const translations = {
     'about.center.highlight': 'con propósito',
     'about.center.line2': 'para hacer brillar',
     'about.center.line3': 'cada idea',
-    'about.intro.part1': 'Nuestra historia comienza con una mujer fundadora que decidió abrir camino en el mundo del software, un espacio donde a veces es más difícil destacar. ✨ Ese espíritu de ',
+    'about.intro.part1': 'Nuestra historia comienza con una mujer fundadora que decidió abrir camino en el mundo del software, un espacio donde a veces es más difícil destacar. Ese espíritu de ',
     'about.intro.highlight': 'resiliencia y creatividad',
-    'about.intro.part2': ' es hoy parte del ADN de nuestra startup.',
+    'about.intro.part2': ' es hoy parte del ADN de nuestra empresa.',
     'about.story': 'Con un equipo diverso y apasionado, desarrollamos soluciones digitales accesibles y confiables para personas, proyectos y pequeñas empresas que buscan crecer sin complicaciones. 💻',
     'about.why.question': '',
     'about.why.answer': 'Creemos en la innovación con propósito: tecnología justa, cercana y diseñada para que cada idea —grande o pequeña— tenga las herramientas que necesita para brillar.',
@@ -93,8 +92,42 @@ const translations = {
     'packages.diamond.description': 'Perfecto para negocios en expansión que necesitan algo más robusto',
     'packages.popular': 'Más Popular',
     
-    // Testimonials Section
-    'testimonials.title': 'Lo que dicen nuestros clientes',
+    // Projects Section
+    'proyectos.title': 'Nuestros Proyectos',
+    'proyectos.features': 'Características',
+    'proyectos.duration': 'Duración',
+    'proyectos.status': 'Estado',
+    'proyectos.technologies': 'Tecnologías',
+    
+    // Project 1
+    'project1.title': 'App de Banca y transacciones',
+    'project1.description': 'Aplicación móvil para banca y transacciones, organizacion financiera y funcionalidades avanzadas de pago. Con un diseño moderno y prioridad ante la experiencia del usuario.',
+    'project1.feature1': 'Transacciones en tiempo real',
+    'project1.feature2': 'Sistema de pagos seguro',
+    'project1.feature3': 'Panel de administración completo',
+    'project1.feature4': 'Optimización SEO avanzada',
+    'project1.duration': '3 meses',
+    'project1.status': 'Completado',
+    
+    // Project 2
+    'project2.title': 'App de recomendaciones geolocalizadas',
+    'project2.description': 'Aplicación móvil que brinda recomendaciones de lugares basado en filtros personalizacos de búsqueda, con una interfaz amigable y fácil de usar.',
+    'project2.feature1': 'Control de filtros de búsqueda en tiempo real',
+    'project2.feature2': 'Recomendaciones personalizadas',
+    'project2.feature3': 'Filtros de búsqueda personalizados',
+    'project2.feature4': 'Integración con sistemas externos',
+    'project2.duration': '6 meses',
+    'project2.status': 'En desarrollo',
+    
+    // Project 3
+    'project3.title': 'Sistema de registro',
+    'project3.description': 'Sistema de registro o matricula de estudiantes, con una interfaz amigable y fácil de usar. Como prioridad se busca agilidad y facilidad de uso con funcionalidades completas.',
+    'project3.feature1': 'Actualización de datos de estudiantes',
+    'project3.feature2': 'Base de datos de actualizada',
+    'project3.feature3': 'Integración de administración de datos',
+    'project3.feature4': 'Panel de administración web',
+    'project3.duration': '4 meses',
+    'project3.status': 'Completado',
     
     // Testimonial 1
     'testimonial1.project': 'Plataforma E-commerce',
@@ -106,7 +139,7 @@ const translations = {
     'testimonial1.year': '2024',
     
     // Testimonial 2
-    'testimonial2.project': 'App Bancaria Móvil',
+    'testimonial2.project': 'Sistema de registro',
     'testimonial2.company': 'FinanceFlow',
     'testimonial2.client': 'Michael Chen',
     'testimonial2.role': 'Gerente de Producto',
@@ -147,10 +180,9 @@ const translations = {
     // Navigation
     'nav.home': 'Home',
     'nav.about': 'About',
-    'nav.services': 'Services',
-    'nav.packages': 'Packages',
-    'nav.testimonials': 'Testimonials',
-    'nav.contact': 'Contact',
+    'nav.servicios': 'Services',
+    'nav.proyectos': 'Projects',
+    'nav.contacto': 'Contact',
     
     // Hero Section
     'hero.title.part1': 'We turn your',
@@ -222,8 +254,42 @@ const translations = {
     'packages.diamond.description': 'Perfect for expanding businesses that need something more robust',
     'packages.popular': 'Most Popular',
     
-    // Testimonials Section
-    'testimonials.title': 'What our clients say',
+    // Projects Section
+    'proyectos.title': 'Our Projects',
+    'proyectos.features': 'Features',
+    'proyectos.duration': 'Duration',
+    'proyectos.status': 'Status',
+    'proyectos.technologies': 'Technologies',
+    
+    // Project 1
+    'project1.title': 'Fashion E-commerce',
+    'project1.description': 'Modern e-commerce platform for fashion store with responsive design and advanced payment functionalities.',
+    'project1.feature1': 'Dynamic product catalog',
+    'project1.feature2': 'Secure payment system',
+    'project1.feature3': 'Complete admin panel',
+    'project1.feature4': 'Advanced SEO optimization',
+    'project1.duration': '3 months',
+    'project1.status': 'Completed',
+    
+    // Project 2
+    'project2.title': 'Business Management System',
+    'project2.description': 'Comprehensive solution for inventory management, sales and real-time reports for medium-sized companies.',
+    'project2.feature1': 'Real-time inventory control',
+    'project2.feature2': 'Advanced reports and analytics',
+    'project2.feature3': 'Multiple users and permissions',
+    'project2.feature4': 'External systems integration',
+    'project2.duration': '6 months',
+    'project2.status': 'In development',
+    
+    // Project 3
+    'project3.title': 'Delivery Mobile App',
+    'project3.description': 'Native mobile app for delivery service with geolocation and real-time tracking.',
+    'project3.feature1': 'Real-time geolocation',
+    'project3.feature2': 'Push notification system',
+    'project3.feature3': 'Maps integration',
+    'project3.feature4': 'Web admin panel',
+    'project3.duration': '4 months',
+    'project3.status': 'Completed',
     
     // Testimonial 1
     'testimonial1.project': 'E-commerce Platform',

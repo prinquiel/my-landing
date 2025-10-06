@@ -6,7 +6,7 @@ export const translations = {
       about: 'About',
       servicios: 'Servicios',
       paquetes: 'Paquetes',
-      testimonios: 'Testimonios',
+      proyectos: 'Proyectos',
       contacto: 'Contacto'
     },
     
@@ -143,33 +143,49 @@ export const translations = {
       }
     },
     
-    // Testimonials Section
-    testimonios: {
-      title: 'Lo que dicen nuestros clientes',
-      shuffle: 'Shuffle',
-      testimonials: [
-        {
-          projectName: 'Sitio Web Corporativo',
-          quote: 'Excelente trabajo, muy profesional y entregado a tiempo.',
-          author: 'María González',
-          role: 'CEO',
-          company: 'Tech Solutions'
-        },
-        {
-          projectName: 'E-commerce Fashion',
-          quote: 'Superó nuestras expectativas. El diseño es increíble.',
-          author: 'Carlos Rodríguez',
-          role: 'Fundador',
-          company: 'Fashion Store'
-        },
-        {
-          projectName: 'Sistema de Gestión',
-          quote: 'La solución perfecta para nuestro negocio. Muy recomendado.',
-          author: 'Ana López',
-          role: 'Directora',
-          company: 'Logistics Pro'
-        }
-      ]
+    // Projects Section
+    proyectos: {
+      title: 'Nuestros Proyectos',
+      features: 'Características',
+      duration: 'Duración',
+      status: 'Estado',
+      technologies: 'Tecnologías',
+      project1: {
+        title: 'E-commerce Fashion',
+        description: 'Plataforma de comercio electrónico moderna para tienda de moda con diseño responsive y funcionalidades avanzadas de pago.',
+        features: [
+          'Catálogo de productos dinámico',
+          'Sistema de pagos seguro',
+          'Panel de administración completo',
+          'Optimización SEO avanzada'
+        ],
+        duration: '3 meses',
+        status: 'Completado'
+      },
+      project2: {
+        title: 'Sistema de Gestión Empresarial',
+        description: 'Solución integral para la gestión de inventarios, ventas y reportes en tiempo real para empresas medianas.',
+        features: [
+          'Control de inventario en tiempo real',
+          'Reportes y analytics avanzados',
+          'Múltiples usuarios y permisos',
+          'Integración con sistemas externos'
+        ],
+        duration: '6 meses',
+        status: 'En desarrollo'
+      },
+      project3: {
+        title: 'Aplicación Móvil de Delivery',
+        description: 'App móvil nativa para servicio de delivery con geolocalización y seguimiento en tiempo real.',
+        features: [
+          'Geolocalización en tiempo real',
+          'Sistema de notificaciones push',
+          'Integración con mapas',
+          'Panel de administración web'
+        ],
+        duration: '4 meses',
+        status: 'Completado'
+      }
     },
     
     // Contact Section
@@ -209,7 +225,7 @@ export const translations = {
       about: 'About',
       servicios: 'Services',
       paquetes: 'Packages',
-      testimonios: 'Testimonials',
+      proyectos: 'Projects',
       contacto: 'Contact'
     },
     
@@ -346,33 +362,49 @@ export const translations = {
       }
     },
     
-    // Testimonials Section
-    testimonios: {
-      title: 'What our clients say',
-      shuffle: 'Shuffle',
-      testimonials: [
-        {
-          projectName: 'Corporate Website',
-          quote: 'Excellent work, very professional and delivered on time.',
-          author: 'María González',
-          role: 'CEO',
-          company: 'Tech Solutions'
-        },
-        {
-          projectName: 'Fashion E-commerce',
-          quote: 'Exceeded our expectations. The design is incredible.',
-          author: 'Carlos Rodríguez',
-          role: 'Founder',
-          company: 'Fashion Store'
-        },
-        {
-          projectName: 'Management System',
-          quote: 'The perfect solution for our business. Highly recommended.',
-          author: 'Ana López',
-          role: 'Director',
-          company: 'Logistics Pro'
-        }
-      ]
+    // Projects Section
+    proyectos: {
+      title: 'Our Projects',
+      features: 'Features',
+      duration: 'Duration',
+      status: 'Status',
+      technologies: 'Technologies',
+      project1: {
+        title: 'Fashion E-commerce',
+        description: 'Modern e-commerce platform for fashion store with responsive design and advanced payment functionalities.',
+        features: [
+          'Dynamic product catalog',
+          'Secure payment system',
+          'Complete admin panel',
+          'Advanced SEO optimization'
+        ],
+        duration: '3 months',
+        status: 'Completed'
+      },
+      project2: {
+        title: 'Business Management System',
+        description: 'Comprehensive solution for inventory management, sales and real-time reports for medium-sized companies.',
+        features: [
+          'Real-time inventory control',
+          'Advanced reports and analytics',
+          'Multiple users and permissions',
+          'External systems integration'
+        ],
+        duration: '6 months',
+        status: 'In development'
+      },
+      project3: {
+        title: 'Delivery Mobile App',
+        description: 'Native mobile app for delivery service with geolocation and real-time tracking.',
+        features: [
+          'Real-time geolocation',
+          'Push notification system',
+          'Maps integration',
+          'Web admin panel'
+        ],
+        duration: '4 months',
+        status: 'Completed'
+      }
     },
     
     // Contact Section

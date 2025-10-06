@@ -6,14 +6,14 @@ import { useLanguage } from '@/lib/language-context';
 export function About() {
   const { t } = useLanguage();
   return (
-    <section id="about" className="min-h-[120vh] flex flex-col justify-center px-6 py-32 relative">
-      {/* Section divider - Top */}
-      <div className="absolute top-0 w-full">
-        <div className="h-px bg-white border-b border-white"></div>
+    <section id="about" className="min-h-[120vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 py-32 relative">
+      {/* Section divider - Top - Hidden on mobile */}
+      <div className="hidden md:block absolute top-0 w-full">
+        <div className="section-divider-full"></div>
       </div>
       
       {/* Binary code decoration - Left */}
-      <div className="absolute left-16 top-1/4 accent-text text-xs font-mono leading-loose opacity-40">
+      <div className="absolute left-4 lg:left-16 top-1/4 accent-text text-xs font-mono leading-loose opacity-40">
         1101100101011001010111001010110010<br />
         1011001010100010101100101001011001<br />
         0101100101011101001010110010101101<br />
@@ -26,7 +26,7 @@ export function About() {
       </div>
 
       {/* Binary code decoration - Right */}
-      <div className="absolute right-16 top-1/3 accent-text text-xs font-mono leading-loose opacity-40 text-right">
+      <div className="absolute right-4 lg:right-16 top-1/3 accent-text text-xs font-mono leading-loose opacity-40 text-right">
         1001010011010101100101011101001010<br />
         1100110010110110010101100101011100<br />
         1010110010101100101010001010110010<br />
@@ -53,94 +53,50 @@ export function About() {
         </div>
       </div>
 
-      {/* Images section with center text */}
-      <div className="relative max-w-7xl mx-auto w-full mt-12">
-        <div className="relative">
-          {/* Background overlay for depth */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20 z-10"></div>
-          
-          {/* Left Image - Angled */}
-          <div className="absolute left-0 top-8 w-[45%] h-[400px] overflow-hidden rounded-2xl border border-white/20 transform -rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl">
-            <Image
-              src="/about/about1.jpg"
-              alt="About us - Image 1"
-              fill
-              className="object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
-            />
-          </div>
-          
-          {/* Right Image - Angled opposite */}
-          <div className="absolute right-0 top-16 w-[45%] h-[400px] overflow-hidden rounded-2xl border border-white/20 transform rotate-2 hover:rotate-0 transition-transform duration-500 shadow-2xl">
-            <Image
-              src="/about/about2.jpg"
-              alt="About us - Image 2"
-              fill
-              className="object-cover opacity-60 hover:opacity-80 transition-opacity duration-300"
-            />
-          </div>
-          
-          {/* Center text overlay with glassmorphism card */}
-          <div className="relative z-20 flex items-center justify-center h-[500px]">
-            <div className="bg-black/30 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-2xl max-w-lg text-center transform hover:scale-105 transition-all duration-300">
-              <h3 className="text-white text-2xl md:text-3xl font-light leading-relaxed tracking-wide">
-                {t('about.center.line1')}<br />
-                <span className="accent-text font-medium">{t('about.center.highlight')}</span> {t('about.center.line2')}<br />
-                <span className="text-white/90">{t('about.center.line3')}</span>
-              </h3>
-              <div className="w-16 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent mx-auto mt-6"></div>
-            </div>
+      {/* Main content section */}
+      <div className="max-w-5xl mx-auto mt-16 px-4">
+        {/* Mission statement card */}
+        <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/10 shadow-2xl mb-16">
+          <div className="text-center">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-light leading-relaxed tracking-wide text-white mb-8">
+              {t('about.center.line1')}<br />
+              <span className="accent-text font-medium">{t('about.center.highlight')}</span> {t('about.center.line2')}<br />
+              <span className="text-white/90">{t('about.center.line3')}</span>
+            </h3>
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent mx-auto"></div>
           </div>
         </div>
-      </div>
 
-      {/* Text content section */}
-      <div className="max-w-5xl mx-auto mt-24 px-8">
-        <div className="space-y-8 text-white/90 leading-relaxed">
-          {/* First text */}
-          <p className="text-lg text-center">
-            {t('about.intro.part1')}
-            <span className="accent-text font-medium">{t('about.intro.highlight')}</span>{t('about.intro.part2')}
-          </p>
+        {/* Text content section */}
+        <div className="space-y-12 text-white/90 leading-relaxed">
+          {/* First paragraph */}
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl text-center leading-relaxed">
+              {t('about.intro.part1')}
+              <span className="accent-text font-medium">{t('about.intro.highlight')}</span>{t('about.intro.part2')}
+            </p>
+          </div>
           
-          {/* Second text */}
-          <p className="text-lg text-center">
-            {t('about.story')}
-          </p>
+          {/* Second paragraph */}
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl text-center leading-relaxed">
+              {t('about.story')}
+            </p>
+          </div>
           
-          {/* Third text */}
-          <div className="text-lg">
-            <p className="mb-4 text-center">
+          {/* Third paragraph */}
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl text-center leading-relaxed">
               {t('about.why.answer')}
             </p>
           </div>
         </div>
       </div>
 
-      {/* Stats section */}
-      <div className="max-w-4xl mx-auto mt-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <div className="text-4xl font-bold accent-text mb-2">50+</div>
-            <div className="text-white/70">{t('about.stats.projects')}</div>
-          </div>
-          <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <div className="text-4xl font-bold accent-text mb-2">5+</div>
-            <div className="text-white/70">{t('about.stats.experience')}</div>
-          </div>
-          <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <div className="text-4xl font-bold accent-text mb-2">100%</div>
-            <div className="text-white/70">{t('about.stats.satisfaction')}</div>
-          </div>
-          <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <div className="text-4xl font-bold accent-text mb-2">24/7</div>
-            <div className="text-white/70">{t('about.stats.support')}</div>
-          </div>
-        </div>
-      </div>
       
-      {/* Section divider */}
-      <div className="w-full mt-16">
-        <div className="h-px bg-white border-b border-white"></div>
+      {/* Section divider - Hidden on mobile */}
+      <div className="hidden md:block w-full mt-16">
+        <div className="section-divider-full"></div>
       </div>
     </section>
   );

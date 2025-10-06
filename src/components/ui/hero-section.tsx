@@ -6,9 +6,9 @@ export function HeroSection() {
   const { t } = useLanguage();
   
   return (
-    <section id="inicio" className="min-h-screen flex items-center justify-center px-6 py-20 relative">
+    <section id="inicio" className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24 py-20 relative">
       {/* Binary code decoration - Left top */}
-      <div className="absolute left-16 top-1/5 accent-text text-sm font-mono leading-relaxed mb-12">
+      <div className="absolute left-4 lg:left-16 top-1/5 accent-text text-sm font-mono leading-relaxed mb-12">
         1101100101011001010111001010110010101100101010001010110010100101010010101110010100101011001011000101
         <br />
         0101100101011001010100101011100101001010110010110001010111001010110010100101010
@@ -30,7 +30,7 @@ export function HeroSection() {
       </div>
 
       {/* Binary code decoration - Right bottom */}
-      <div className="absolute right-16 bottom-1/5 accent-text text-sm font-mono leading-relaxed text-right mt-12">
+      <div className="absolute right-4 lg:right-16 bottom-1/5 accent-text text-sm font-mono leading-relaxed text-right mt-12">
         1101100101011001010111001010110010101100101010001010110010100101010010101110010100101011001011000101
         <br />
         0101100101011001010100101011100101001010110010110001010111001010110010100101010

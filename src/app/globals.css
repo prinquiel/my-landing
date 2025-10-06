@@ -197,24 +197,49 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, label {
   color: var(--accent-pink);
 }
 
-/* Vertical border lines */
-.page-borders::before,
-.page-borders::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background-color: white;
-  z-index: 40;
+/* Vertical border lines - Hidden on mobile */
+@media (min-width: 768px) {
+  .page-borders::before,
+  .page-borders::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: white;
+    z-index: 40;
+  }
+
+  .page-borders::before {
+    left: 120px; /* 7.5rem padding from left */
+  }
+
+  .page-borders::after {
+    right: 120px; /* 7.5rem padding from right */
+  }
 }
 
-.page-borders::before {
-  left: 64px; /* 4rem padding from left */
+/* Ensure content doesn't overlap with vertical lines on desktop */
+@media (min-width: 768px) {
+  .page-borders main {
+    margin-left: 140px; /* 8.75rem - ensures content is well clear of left line */
+    margin-right: 140px; /* 8.75rem - ensures content is well clear of right line */
+    max-width: calc(100vw - 280px); /* Constrain width to center content */
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.page-borders::after {
-  right: 64px; /* 4rem padding from right */
+/* Horizontal section dividers that extend to full width and create X pattern */
+@media (min-width: 768px) {
+  .page-borders .section-divider-full {
+    position: absolute;
+    left: -20vw;
+    width: 120vw;
+    height: 1px;
+    background-color: white;
+    z-index: 40;
+  }
 }
 
 /* Floating animation */
@@ -268,4 +293,13 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, label {
 
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+/* Hide scrollbar for mobile navbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
 }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useLanguage } from '@/lib/language-context';
+import { Instagram, Facebook, Mail } from 'lucide-react';
 
 export function Contacto() {
   const { t } = useLanguage();
@@ -25,20 +26,20 @@ export function Contacto() {
   };
 
   return (
-    <section id="contacto" className="min-h-screen flex items-center justify-center px-6 py-20 relative">
-      {/* Section divider - Top */}
-      <div className="absolute top-0 w-full">
-        <div className="h-px bg-white border-b border-white"></div>
+    <section id="contacto" className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24 py-20 relative">
+      {/* Section divider - Top - Hidden on mobile */}
+      <div className="hidden md:block absolute top-0 w-full">
+        <div className="hidden md:block h-px bg-white border-b border-white"></div>
       </div>
       
       {/* Subtle decorative elements */}
-      <div className="absolute left-8 top-1/4 accent-text text-xs font-mono leading-loose opacity-20">
+      <div className="absolute left-2 lg:left-8 top-1/4 accent-text text-xs font-mono leading-loose opacity-20">
         01101001<br />
         10110010<br />
         01011100
       </div>
 
-      <div className="absolute right-8 bottom-1/4 accent-text text-xs font-mono leading-loose opacity-20 text-right">
+      <div className="absolute right-2 lg:right-8 bottom-1/4 accent-text text-xs font-mono leading-loose opacity-20 text-right">
         11010010<br />
         01100101<br />
         10110010
@@ -54,18 +55,12 @@ export function Contacto() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold mb-6 accent-text">{t('contact.info.title')}</h3>
               <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-6 h-6 accent-bg rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white text-sm">📧</span>
-                  </div>
-                  <span className="text-white/80">prindiquielv@gmail.com</span>
-                </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 accent-bg rounded-full flex items-center justify-center mr-4">
                     <span className="text-white text-sm">📱</span>
@@ -81,12 +76,47 @@ export function Contacto() {
               </div>
             </div>
             
+            {/* Social Media */}
             <div>
-              <h4 className="text-lg font-medium mb-4">{t('contact.schedule.title')}</h4>
-              <div className="space-y-2 text-white/70">
-                <div>{t('contact.schedule.weekdays')}</div>
-                <div>{t('contact.schedule.saturday')}</div>
-                <div>{t('contact.schedule.sunday')}</div>
+              <h4 className="text-lg font-medium mb-4 accent-text">Síguenos</h4>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <div className="w-8 h-8 accent-bg rounded-full flex items-center justify-center mr-4">
+                    <Instagram className="w-4 h-4 text-white" />
+                  </div>
+                  <a 
+                    href="https://instagram.com/quiel.development" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-white/80 hover:accent-text transition-colors duration-300"
+                  >
+                    @quiel.development
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-8 h-8 accent-bg rounded-full flex items-center justify-center mr-4">
+                    <Facebook className="w-4 h-4 text-white" />
+                  </div>
+                  <a 
+                    href="https://facebook.com/quiel.development.studio" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-white/80 hover:accent-text transition-colors duration-300"
+                  >
+                    Quiel Development Studio
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-8 h-8 accent-bg rounded-full flex items-center justify-center mr-4">
+                    <Mail className="w-4 h-4 text-white" />
+                  </div>
+                  <a 
+                    href="mailto:quiel.development.studio@gmail.com" 
+                    className="text-white/80 hover:accent-text transition-colors duration-300"
+                  >
+                    quiel.development@gmail.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>

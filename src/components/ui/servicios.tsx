@@ -65,11 +65,11 @@ export function Servicios() {
     }
   ];
   return (
-    <section id="servicios" className="min-h-screen flex flex-col justify-center px-6 pt-8 pb-32 relative">
+    <section id="servicios" className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-8 pb-32 relative">
 
       
       {/* Binary code decoration - Right */}
-      <div className="absolute right-16 top-1/4 accent-text text-xs font-mono leading-loose opacity-40 text-right">
+      <div className="absolute right-4 lg:right-16 top-1/4 accent-text text-xs font-mono leading-loose opacity-40 text-right">
         1101100101011001010111001010110010<br />
         1011001010100010101100101001011001<br />
         0101100101011101001010110010101101<br />
@@ -82,7 +82,7 @@ export function Servicios() {
       </div>
 
       {/* Binary code decoration - Left */}
-      <div className="absolute left-16 bottom-1/3 accent-text text-xs font-mono leading-loose opacity-30">
+      <div className="absolute left-4 lg:left-16 bottom-1/3 accent-text text-xs font-mono leading-loose opacity-30">
         1001010011010101100101011101001010<br />
         1100110010110110010101100101011100<br />
         1010110010101100101010001010110010<br />
@@ -173,9 +173,9 @@ export function Servicios() {
         </div>
       </div>
       
-      {/* Section divider - Bottom */}
-      <div className="w-full mt-16">
-        <div className="h-px bg-white border-b border-white"></div>
+      {/* Section divider - Bottom - Hidden on mobile */}
+      <div className="hidden md:block w-full mt-16">
+        <div className="section-divider-full"></div>
       </div>
     </section>
   );

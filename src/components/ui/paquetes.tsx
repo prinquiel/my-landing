@@ -26,7 +26,7 @@ export function Paquetes() {
     }
   ];
   return (
-    <section id="paquetes" className="min-h-screen flex flex-col justify-center px-6 py-32 relative">
+    <section id="paquetes" className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-32 relative">
 
       
       {/* Binary code decoration - spread across top */}
@@ -96,9 +96,9 @@ export function Paquetes() {
         </div>
       </div>
       
-      {/* Section divider - Bottom */}
-      <div className="w-full mt-16">
-        <div className="h-px bg-white border-b border-white"></div>
+      {/* Section divider - Bottom - Hidden on mobile */}
+      <div className="hidden md:block w-full mt-16">
+        <div className="section-divider-full"></div>
       </div>
     </section>
   );
