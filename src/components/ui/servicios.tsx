@@ -97,7 +97,7 @@ export function Servicios() {
         {/* Title with decoration */}
         <div className="text-center mb-16 relative">
           <h2 className="text-6xl font-bold text-white tracking-wider mb-8 relative z-10">
-            {t('services.title')}
+            {t('servicios.title')}
           </h2>
           
           {/* Decoration image on top of title */}
@@ -125,8 +125,8 @@ export function Servicios() {
               key={index} 
               className="border-2 border-white bg-transparent rounded-2xl p-8 hover:border-pink-500 transition-all duration-300 hover:transform hover:-translate-y-2 relative"
             >
-                             <h3 className="text-xl font-semibold mb-4 text-white">{t(service.titleKey)}</h3>
-               <p className="text-white/80 mb-6 leading-relaxed text-base">{t(service.descriptionKey)}</p>
+              <h3 className="text-xl font-semibold mb-4 text-white">{t(service.titleKey)}</h3>
+              <p className="text-white/80 mb-6 leading-relaxed text-base">{t(service.descriptionKey)}</p>
               <ul className="space-y-2">
                 {service.features.map((featureKey, featureIndex) => (
                   <li key={featureIndex} className="flex items-start text-white/70 text-base">

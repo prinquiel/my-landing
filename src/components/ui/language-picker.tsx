@@ -19,13 +19,13 @@ export function LanguagePicker() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-white/80 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10"
+        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 text-white/80 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10"
       >
-        <Globe size={16} />
-        <span className="text-sm font-medium">{currentLanguage?.flag}</span>
+        <Globe size={16} className="flex-shrink-0" />
+        <span className="text-sm sm:text-base font-medium">{currentLanguage?.flag}</span>
         <ChevronDown 
           size={14} 
-          className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
+          className={`flex-shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
         />
       </button>
 

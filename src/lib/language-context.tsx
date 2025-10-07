@@ -46,6 +46,7 @@ const translations = {
     'about.stats.support': 'Soporte Técnico',
     
     // Services Section
+    'servicios.title': 'Nuestros Servicios',
     'services.title': 'Services',
     'services.basic.title': 'Página web básica',
     'services.basic.description': 'Una web sencilla y directa para mostrar tu marca, producto o idea. Ideal para quienes necesitan presencia en internet con un diseño atractivo y rápido sin funcionalidades complejas. Incluye:',
@@ -62,7 +63,7 @@ const translations = {
     'services.complex.feature1': 'Nos adaptamos a las necesidades de tu sistema',
     'services.complex.feature2': 'Sistemas de reservaciones, citas, control de inventario, gestión de clientes',
     'services.complex.feature3': 'Ofrecemos implementaciones de inteligencia artificial',
-    'services.complex.feature4': 'Múltiples páneles según los requisitos del cliente',
+    'services.complex.feature4': 'Múltiples paneles según los requisitos del cliente',
     'services.catalog.title': 'Diseño catálogo digital',
     'services.catalog.description': 'Un espacio visual para mostrar tus productos o servicios sin necesidad de una tienda completa. Perfecto para restaurantes, tiendas pequeñas o negocios que quieren dar a conocer su oferta.',
     'services.catalog.feature1': 'Listado ordenado de productos/servicios',
@@ -101,7 +102,7 @@ const translations = {
     
     // Project 1
     'project1.title': 'App de Banca y transacciones',
-    'project1.description': 'Aplicación móvil para banca y transacciones, organizacion financiera y funcionalidades avanzadas de pago. Con un diseño moderno y prioridad ante la experiencia del usuario.',
+    'project1.description': 'Aplicación móvil para banca y transacciones, organización financiera y funcionalidades avanzadas de pago. Con un diseño moderno y prioridad ante la experiencia del usuario.',
     'project1.feature1': 'Transacciones en tiempo real',
     'project1.feature2': 'Sistema de pagos seguro',
     'project1.feature3': 'Panel de administración completo',
@@ -208,6 +209,7 @@ const translations = {
     'about.stats.support': 'Technical Support',
     
     // Services Section
+    'servicios.title': 'Our Services',
     'services.title': 'Services',
     'services.basic.title': 'Basic website',
     'services.basic.description': 'A simple and direct website to showcase your brand, product or idea. Ideal for those who need an internet presence with an attractive and fast design without complex functionalities. Includes:',

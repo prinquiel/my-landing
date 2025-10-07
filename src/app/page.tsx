@@ -5,6 +5,7 @@ import { Servicios } from "@/components/ui/servicios";
 import { Testimonials } from "@/components/ui/testimonials";
 import { Contacto } from "@/components/ui/contacto";
 import { Chatbox } from "@/components/ui/chatbox";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 
 export default async function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default async function HomePage() {
         <Contacto />
       </main>
       <Chatbox />
+      <WhatsAppButton />
     </div>
   );
 }
